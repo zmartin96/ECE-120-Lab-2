@@ -8,6 +8,8 @@
 //}
 int main(void)
 {
+	FILE *inFile;
+	inFile=fopen("/Users/zacharymartin/Documents/XCode Projects/C Programming/C Programming/lab2.txt","w");
 	int num1[5]={-22,12,10, 12, -11};
 	int num2[5]={33,3,3,3,3};
 	int resInt[5];
@@ -43,10 +45,10 @@ int main(void)
 			resFloat[i]=fmod((float)num1[i],num2[i]);
 			resDouble[i]=fmod((double)num1[i],num2[i]);
 		}
-		printf("\n%d.\n",i+1);
-		printf("%-15s%d %c %d = %d\n", type[0],num1[i],operator,num2[i],resInt[i]);
-		printf("%-15s%d %c %d = %u\n", type[1],num1[i],operator,num2[i],resUnsigned[i]);
-		printf("%-15s%d %c %d = %f\n", type[2],num1[i],operator,num2[i],resFloat[i]);
-		printf("%-15s%d %c %d = %lf\n", type[3],num1[i],operator,num2[i],resDouble[i]);
+		fprintf(inFile,"\n%d.\n",i+1);
+		fprintf(inFile,"%-15s%d %c %d = %d\n", type[0],num1[i],operator,num2[i],resInt[i]);
+		fprintf(inFile,"%-15s%d %c %d = %u\n", type[1],num1[i],operator,num2[i],resUnsigned[i]);
+		fprintf(inFile,"%-15s%d %c %d = %f\n", type[2],num1[i],operator,num2[i],resFloat[i]);
+		fprintf(inFile,"%-15s%d %c %d = %lf\n", type[3],num1[i],operator,num2[i],resDouble[i]);
 	}
 }
