@@ -6,7 +6,7 @@
 //	printf("10./2/3=%f\n\n",10./2/3);
 //	return 0;
 //}
-int main(void)
+int main1(void)
 {
 	FILE *inFile;
 	inFile=fopen("/Users/zacharymartin/Documents/XCode Projects/C Programming/C Programming/lab2.txt","w");
@@ -51,4 +51,18 @@ int main(void)
 		fprintf(inFile,"%-15s%d %c %d = %f\n", type[2],num1[i],operator,num2[i],resFloat[i]);
 		fprintf(inFile,"%-15s%d %c %d = %lf\n", type[3],num1[i],operator,num2[i],resDouble[i]);
 	}
+	//
+	
+	
+	
+	//
+
+	int a=256;
+	while(a>1)
+	{
+		printf("%d\n",a);
+		a=sqrt(a);
+	}
+	printf("%d\n", 1);
+	return 0;
 }
